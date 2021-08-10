@@ -87,6 +87,11 @@ public interface PaxLoggingConstants {
     String LOGGING_CFG_USE_FILE_FALLBACK_LOGGER = "org.ops4j.pax.logging.useFileLogFallback";
 
     /**
+     * System property that specifies the TLS debug logging mode.
+     */
+    String LOGGING_CFG_TLS_LOGGING_MODE = "org.ops4j.pax.logging.tlsdebug.loggingMode";
+
+    /**
      * {@code org.osp4j.pax.logging} PID property to specify max size for
      * {@link org.osgi.service.log.LogReaderService}
      */
