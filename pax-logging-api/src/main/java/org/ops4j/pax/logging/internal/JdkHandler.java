@@ -86,7 +86,7 @@ public class JdkHandler extends Handler {
 
         String message;
         try {
-            if (TLS_DEBUG_LOGGER.equals(loggerName) && isTLSDebugLoggingEnabled()) {
+            if (TLS_DEBUG_LOGGER.equals(loggerName)) {
                 // The TLS debug log records contain an additional string parameter with dump attachments.
                 // They are without a format parameter in the log message so they are not parsed by the JUL formatter.
                 message = getTLSLogMessage(record);
