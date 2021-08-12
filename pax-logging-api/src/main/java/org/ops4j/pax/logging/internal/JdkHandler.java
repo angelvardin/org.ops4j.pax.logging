@@ -146,7 +146,7 @@ public class JdkHandler extends Handler {
                         .filter(x -> !isHexDumpMessage(x) || isDebugLoggingEnabled)
                         .collect(Collectors.joining(System.lineSeparator()));
 
-                logParameters = logParameters != null && !logParameters.trim().isEmpty() ? System.lineSeparator() + logParameters : "";
+                logParameters = !logParameters.trim().isEmpty() ? System.lineSeparator() + logParameters : "";
                 message += logParameters;
             }
         } catch (Exception ex) {
