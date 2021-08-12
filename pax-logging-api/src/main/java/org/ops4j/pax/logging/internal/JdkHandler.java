@@ -159,7 +159,7 @@ public class JdkHandler extends Handler {
     /**
      * Checks if TLS debug logging is enabled.
      *
-     * @return  Returns <b>true</b> if the value of the system property <b>com.seeburger.tlsdebug.LOGGING_MODE</b> is not blank and
+     * @return  Returns <b>true</b> if the value of the system property {@value PaxLoggingConstants#LOGGING_CFG_TLS_LOGGING_MODE} is not blank and
      *          the TLS logging mode is not <b>no_logging</b>.
      */
     private boolean isTLSDebugLoggingEnabled() {
@@ -171,7 +171,7 @@ public class JdkHandler extends Handler {
      * Checks whether the TLS log parameter is hex dump message.
      *
      * @param message The TLS log parameter.
-     * @return  If the parameter starts with <b>0000:</b> returns true. Otherwise returns false.
+     * @return  If the parameter starts with <b>0000:</b> returns true. Otherwise, returns false.
      */
     private boolean isHexDumpMessage(String message) {
         return message.startsWith(HEX_DUMP_OFFSET, 2);
