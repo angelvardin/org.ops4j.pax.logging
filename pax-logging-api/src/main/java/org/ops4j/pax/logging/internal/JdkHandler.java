@@ -37,8 +37,8 @@ import org.ops4j.pax.logging.PaxLoggingManager;
  * {@link java.text.MessageFormat#format(String, Object...)} method on log record's message.
  * It doesn't do anything with remaining fields of {@link LogRecord}.
  * <p>
- * Since the backport of TLSv1.3 in java (JDK-8248721) the the logic of TLS debug traces has changed. The TLS log records contain
- * additional string parameters. They are without a format parameter in the log message. The {@link JdkHandler} appends them
+ * Since the backport of TLSv1.3 in java (JDK-8248721) the logic of TLS debug traces has changed. The TLS log records contain
+ * additional string parameters. They are without format parameters in the log message. The {@link JdkHandler} appends them
  * to the end of the TLS log message.
  * <p>
  * The {@link JdkHandler} has the following logging modes for the TLS log records:<br>
