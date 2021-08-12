@@ -159,7 +159,7 @@ public class JdkHandler extends Handler {
     /**
      * Checks if TLS debug logging is enabled.
      *
-     * @return  Returns <b>true</b> if the value of the system property {@value PaxLoggingConstants#LOGGING_CFG_TLS_LOGGING_MODE} is not blank and
+     * @return  Returns true if the value of the system property {@value PaxLoggingConstants#LOGGING_CFG_TLS_LOGGING_MODE} is not blank and
      *          the TLS logging mode is not <b>no_logging</b>.
      */
     private boolean isTLSDebugLoggingEnabled() {
