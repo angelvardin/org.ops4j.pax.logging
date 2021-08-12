@@ -171,7 +171,7 @@ public class JdkHandler extends Handler {
      * Checks whether the TLS log parameter is hex dump message.
      *
      * @param message The TLS log parameter.
-     * @return  If the parameter starts with <b>0000:</b> returns true. Otherwise returns false.
+     * @return  If the parameter starts with <b>0000:</b> returns true. Otherwise, returns false.
      */
     private boolean isHexDumpMessage(String message) {
         return message.startsWith(HEX_DUMP_OFFSET, 2);
