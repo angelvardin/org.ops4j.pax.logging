@@ -134,6 +134,7 @@ public class JdkHandler extends Handler {
         String message;
         try {
             message = logRecord.getMessage();
+
             if (logRecord.getParameters() != null) {
                 String tlsLoggingModeProperty = System.getProperty(PaxLoggingConstants.LOGGING_CFG_TLS_LOGGING_MODE);
                 boolean isDebugLoggingEnabled = DEBUG_LOGGING_MODE.equals(tlsLoggingModeProperty);
@@ -146,7 +147,7 @@ public class JdkHandler extends Handler {
                         .filter(x -> !isHexDumpMessage(x) || isDebugLoggingEnabled)
                         .collect(Collectors.joining(System.lineSeparator()));
 
-                logParameters = logParameters != null && !logParameters.trim().isEmpty() ? System.lineSeparator() + logParameters : "";
+                logParameters = !logParameters.trim().isEmpty() ? System.lineSeparator() + logParameters : "";
                 message += logParameters;
             }
         } catch (Exception ex) {
